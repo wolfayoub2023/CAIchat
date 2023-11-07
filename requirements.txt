@@ -5,3 +5,4 @@ Requests
 gunicorn
 websockets
 pusher
+characterai
