@@ -6,3 +6,4 @@ gunicorn
 websockets
 characterai
 contextlib
+json
