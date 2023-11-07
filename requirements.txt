@@ -5,3 +5,4 @@ Requests
 xmltodict
 google-cloud-storage
 gunicorn
+websockets
