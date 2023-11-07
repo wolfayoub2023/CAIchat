@@ -2,14 +2,6 @@ import asyncio
 from characterai import PyAsyncCAI
 from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
-from pusher import Pusher
-
-pusher_client = Pusher(
-    app_id='1701845',
-    key='3c16ad38ace91ecac012',
-    secret='38d38f39b41fefa6a698',
-    cluster='eu',
-)
 
 app = Flask(__name__)
 CORS(app)
@@ -53,13 +45,10 @@ def chatbot_endpoint():
         message = data['message']
 
         response_text = asyncio.run(chatbot_logic(char, unique_id, message))
-
-        # Trigger a WebSocket event with Pusher
-        pusher_client.trigger(f'chat_{unique_id}', 'new_message', {'text': response_text})
-
+        
         # Extract the message text
         message_text = response_text.split(': ', 1)[-1]
-
+        
         return jsonify({'response': message_text})
 
     except Exception as e:
