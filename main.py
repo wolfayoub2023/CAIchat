@@ -1,8 +1,10 @@
 import asyncio
 from characterai import PyAsyncCAI
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 async def chatbot_logic(char, unique_id, message):
     client = PyAsyncCAI('19a703af5bf8b29673514f8afd0041c775cd5916')
