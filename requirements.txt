@@ -1,1 +1,7 @@
-tls-client>=0.2.2
+tls-client
+Flask
+Flask_Cors
+Requests
+xmltodict
+google-cloud-storage
+gunicorn
