@@ -4,5 +4,4 @@ Flask_Cors
 Requests
 gunicorn
 websockets
-pusher
 characterai
