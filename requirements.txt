@@ -2,7 +2,5 @@ tls-client
 Flask
 Flask_Cors
 Requests
-xmltodict
-google-cloud-storage
 gunicorn
 websockets
