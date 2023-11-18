@@ -5,6 +5,5 @@ Requests
 gunicorn
 websockets
 characterai
-contextlib
 json
 asyncio
